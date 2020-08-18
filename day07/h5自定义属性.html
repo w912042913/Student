@@ -5,9 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<div getTime="20" data-index="2" date-list-name="eric"></div>
+<div getTime="20" data-index="2" data-list-name="eric"></div>
 <script>
-    var div=document.querySelectorAll('div')
+    var div=document.querySelector('div')
+
     console.log(div.getAttribute('getTime'))
     div.setAttribute('date-time',20)
     console.log(div.getAttribute('data-index'))
