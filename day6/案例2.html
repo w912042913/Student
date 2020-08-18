@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<img src="" alt="" width="500px" height="500px">
+<div></div>
+<script>
+    var img  =document.querySelector('img');
+    var div=  document.querySelector('div');
+    var date = new Date();
+    var h =date.getHours();
+    if( h<6 ){
+        img.src='../images/hao/z.gif';
+        div.innerHTML='早上好';
+    }
+         else if( h<12 ){
+        img.src='../images/hao/s.gif';
+        div.innerHTML='中午好';
+    }  else  if( h<18 ){
+        img.src='../images/hao/x.gif';
+        div.innerHTML='下午好';
+    }
+    else if( h<24 ){
+        img.src='../images/hao/w.gif';
+        div.innerHTML='晚上好';
+    }
+</script>
+</body>
+</html>

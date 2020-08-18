@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background: red;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <button class="btn">按一下就变色</button>
+</div>
+<script>
+    var body  = document.querySelector("body");
+    var btn =document.querySelector('.btn');
+     var flag= 0;
+    btn.onclick=function () {
+        if (flag == 0) {
+            body.style.backgroundColor = 'green';
+            flag = 1;
+        }
+        else {
+            flag = 0;   
+            body.style.backgroundColor = 'red';
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

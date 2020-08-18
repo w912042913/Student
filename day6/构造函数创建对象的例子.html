@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Star(uname,age,sex) {
+            this.name= uname;
+            this.age= age;
+            this.sex=sex;
+            this.sing= function (song) {
+                console.log(song)
+            }
+        }
+        var jay=  new Star('zjl',18,'nan'); //调用的函数返回是一个对象
+        console.log(jay)
+        jay.sing('asdsadsad')
+    </script>
+</head>
+<body>
+
+</body>
+</html>
