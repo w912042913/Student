@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button>点击</button>
+<p>abc</p>
+<div class="inner"></div>
+<div class="create"></div>
+
+<script>
+    // window.onload= function () {
+    //     document.write('<div>123</div>')
+    // }
+    // document.write创建元素如果页面文档流加载完毕 ，在调用这句话会导致页面重新绘制
+    // var btn =document.querySelector('button')
+    // btn.onclick=function () {
+    //     document.write('<div>123</div>')
+    // }
+    // var inner =document.querySelector('.inner')
+    //拼接字符串 不建议
+    // for (var i = 0; i <100 ; i++) {
+    //     inner.innerHTML+='<a href="#">百度</a>'
+    // }
+    // var arr=[]
+    // for (var i = 0; i <100; i++) {
+    //     //数组元素的添加
+    //  arr.push('<a href="#">百度</a>')
+    // }
+    //将数组连接起来
+    // inner.innerHTML+=arr.join('/')
+    var create =document.querySelector('.create')
+    for (var i = 0; i <100 ; i++) {
+        var a =document.createElement('a')
+        create.appendChild(a)
+        a.innerHTML = '<a href="#">百度</a>'
+    }
+</script>
+</body>
+</html>

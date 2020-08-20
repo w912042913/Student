@@ -1,0 +1,55 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fn() {
+        var d1 = +new Date() // + 号相当于将时间对象做了隐士转换
+        for (var i = 0; i < 1000 ; i++) {
+            var div = document.createElement('div')
+            div.style.width = '100px';
+            div.style.height = '2px';
+            div.style.border = '1px solid blue';
+            document.body.appendChild(div)
+        }
+
+        var d2 = +new Date();
+        console.log(d2-d1)
+    }
+    fn();
+</script>
+
+
+</body>
+</html>

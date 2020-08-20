@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+     var divs =    document.querySelectorAll('div')
+     divs[0].onclick =function () {
+         alert('asdsad')
+         this.onclick=null;
+     }
+     divs[0].onclick =function () {
+         alert('qwer')
+     }
+     divs[1].addEventListener('click',fn)
+     function fn() {
+         alert('哈哈哈')
+         this.removeEventListener('click',fn)
+     }
+
+
+
+
+
+
+
+
+ // var divs= document.querySelectorAll('div')
+ //    divs[0].onclick=function () {
+ //        alert('asdasddasdasd')
+ //        //传统删除事件的方式
+ //        this.onclick =null;
+ //    }
+ // divs[1].addEventListener('click',fn)   //传函数名，不传括号
+ //    function fn() {
+ //        alert( 'hahaha')
+ //        this.removeEventListener('click',fn)
+ //    }
+</script>
+</body>
+</html>
