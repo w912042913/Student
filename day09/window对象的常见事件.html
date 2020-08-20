@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // window.onload =function () {
+        //     var btn =document.querySelector('button')
+        //    btn.addEventListener('click',function () {
+        //        alert('点击我')
+        //    })
+        // }
+        // window.onload=function () {
+        //     alert('hehehe ')
+        // }
+        window.addEventListener('load',function () {
+            var btn =document.querySelector('button')
+            btn.addEventListener('click',function () {
+                alert('点击我')
+            })
+        })
+        // DOMContentLoaded 是dom加载完毕，加载速度比load快
+        document.addEventListener('DOMContentLoaded',function () {
+            alert('喜喜')
+        })
+    </script>
+</head>
+<body>
+<button> 按钮</button>
+</body>
+</html>

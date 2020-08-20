@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+            top: 2px;
+        }
+        body{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<img src="../images/angle.gif" alt="" class="img1">
+<img src="../images/angle.gif" alt="" class="img2">
+<img src="../images/angle.gif" alt="" class="img3">
+<img src="../images/angle.gif" alt="" class="img4">
+<script>
+   var pic =   document.querySelector('.img1')
+   var pic1 =   document.querySelector('.img2')
+   var pic2 =   document.querySelector('.img3')
+    document.addEventListener('mousemove',function (e) {
+        var x= e.pageX
+        var y= e.pageY
+        console.log(x,y)
+        pic.style.left=x-40+'px'
+        pic.style.top=y-30+'px'
+        pic1.style.left=x+'px'
+        pic1.style.top=y+'px'
+        pic2.style.left=x+40+'px'
+        pic2.style.top=y+30+'px'
+    })
+</script>
+</body>
+</html>

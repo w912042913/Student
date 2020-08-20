@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li>西施</li>
+    <li>貂蝉</li>
+    <li>昭君</li>
+    <li>凤姐</li>
+    <li>芙蓉姐姐</li>
+</ul>
+<input type="button" value="按钮" id="btn" />
+
+<script>
+    var ul= document.querySelector('#ul')
+    ul.onclick=function(e){
+        e.target.style.backgroundColor='red'
+    }
+    var btn =   document.querySelector('#btn')
+    btn.onclick=function (e) {
+       var li=   document.createElement('li')
+        li.innerHTML='孙尚香'
+        ul.insertBefore(li,ul.children[0])
+    }
+
+
+</script>
+</body>
+</html>
