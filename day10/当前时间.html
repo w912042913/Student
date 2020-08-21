@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <span><span id="year">00</span>年
+    <span id="month">00</span>月
+        <span id="day">00</span>日
+   <span id="hour">00</span>时
+   <span id="minute">00</span>分
+    <span id="second">00</span>秒
+        </span>
+<script>
+
+
+    setInterval(count,100)
+    function count() {
+        var year=   document.getElementById('year')
+        var month=   document.getElementById('month')
+        var day=   document.getElementById('day')
+        var hour=   document.getElementById('hour')
+        var minute=   document.getElementById('minute')
+        var second=   document.getElementById('second')
+        var date=  new Date()
+           var s = date.getSeconds()
+        s = s < 10? '0'+s : s;
+        second.innerHTML = s;
+         var m =date.getMinutes()
+        m = m < 10? '0'+m : m;
+        minute.innerHTML = m;
+         var h=  date.getHours()
+        h = h < 10? '0'+h : h;
+        hour.innerHTML = h;
+        var mo =date.getMonth()+1
+        mo = mo < 10? '0'+mo : mo;
+        month.innerHTML = mo;
+        var d= date.getDate()
+        d = d < 10? '0'+d : d;
+        day.innerHTML = d;
+        var y= date.getFullYear()
+        y = y < 10? '0'+y : y;
+        year.innerHTML = y;
+        date.getweek
+
+        // var times =  (nowTime-date)/1000  // 总秒数
+        // var m = parseInt(times/60/60/24%12) // 天
+        // m = m < 10? '0'+m : m;
+        // month.innerHTML = m;
+        // var d = parseInt(times/60/60/24) // 天
+        // d = d < 10? '0'+d : d;
+        // day.innerHTML = d;
+        // var h = parseInt(times/60/60%24) // 小时
+        // h = h < 10? '0'+h : h;
+        // hour.innerHTML = h;
+        // var m = parseInt(times/60%60) // 小时
+        // m = m < 10? '0'+m : m;
+        // minute.innerHTML = m;
+        // var s = parseInt(times%60) // 小时
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .time-item {
+            width: 450px;
+            height: 45px;
+            margin: 0 auto;
+        }
+
+        .time-item strong {
+            background: orange;
+            color: #fff;
+            line-height: 49px;
+            font-size: 36px;
+            font-family: Arial;
+            padding: 0 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .time-item>span {
+            float: left;
+            line-height: 49px;
+            color: orange;
+            font-size: 32px;
+            margin: 0 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            width: 260px;
+            height: 50px;
+            margin: 200px auto 50px auto;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title">距离光棍节，还有</h1>
+
+<div class="time-item">
+    <span><span id="day">00</span>天</span>
+    <strong><span id="hour">00</span>时</strong>
+    <strong><span id="minute">00</span>分</strong>
+    <strong><span id="second">00</span>秒</strong>
+</div>
+
+
+<script>
+    // 目标时间的时间戳
+    var endDate = new Date('2020-11-11 0:0:0');
+    var end = endDate.getTime();
+
+    // 获取天时分秒的盒子
+    var spanDay = document.getElementById('day');
+    var spanHour = document.getElementById('hour');
+    var spanMinute = document.getElementById('minute');
+    var spanSecond = document.getElementById('second');
+
+    // 开启定时器
+    setInterval(countdown, 1000);
+
+    countdown();
+    // 倒计时
+    function countdown() {
+        // 当前时间的时间戳
+        var nowDate = new Date();
+        var now = nowDate.getTime();
+
+        // 计算时间差（毫秒）
+        var leftTime = end - now;
+        // 相差的秒数
+        leftTime /= 1000;
+
+        // 求 相差的天数/小时数/分钟数/秒数
+        var day, hour, minute, second;
+
+        day = Math.floor(leftTime / 60 / 60 / 24);
+        hour = Math.floor(leftTime / 60 / 60 % 24);
+        minute = Math.floor(leftTime / 60 % 60);
+        second = Math.floor(leftTime % 60);
+
+        // 设置盒子的内容
+        spanDay.innerText = day;
+        spanHour.innerText = hour;
+        spanMinute.innerText = minute;
+        spanSecond.innerText = second;
+
+    }
+</script>
+</body>
+</html>
