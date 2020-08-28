@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            /*给父级元素添加flex属性*/
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            flex-wrap: wrap;
+            /*align-items: center;*/
+            /*侧轴 但是不要给盒子高度*/
+            align-items: stretch;/*拉伸*/
+            align-content: space-between;
+
+        }
+        div span{
+            /*width: 150px;*/
+            height: 100px;
+            width: 200px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+
+</div>
+
+
+
+
+
+</body>
+<html>
